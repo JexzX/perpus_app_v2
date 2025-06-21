@@ -2,7 +2,7 @@
 <h2>Borrow Reports</h2>
 <table>
     <tr>
-        <th>#</th>
+        <th>No</th>
         <th>User</th>
         <th>Role</th>
         <th>Book</th>
