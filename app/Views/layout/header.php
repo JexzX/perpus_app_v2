@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/29/29302.png" type="image/png">
+    <link rel="icon" href="<?= base_url('logo.png') ?>" type="logo">
 
     <title>Perpustakaan Teknologi Informasi</title>
     <meta charset="UTF-8">

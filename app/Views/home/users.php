@@ -1,13 +1,9 @@
 <?= view('layout/header_dark') ?>
-<h2>Dashboard</h2>
-<h3>Available Books</h3>
-<?php foreach($books as $b): ?>
-<div class="card">
-    <div class="card-title"><?= esc($b['title']) ?></div>
-    <p><?= esc($b['description']) ?></p>
-</div>
-<?php endforeach ?>
-<h3>Registered Members</h3>
+<h2>Member List</h2>
+<form method="get" action="/users" class="search">
+    <input name="q" placeholder="Search members..." value="<?= esc($q) ?>">
+    <button class="btn" type="submit">Search</button>
+</form>
 <table>
     <tr>
         <th>#</th>

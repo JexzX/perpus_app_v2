@@ -12,6 +12,8 @@ $routes->post('/login', 'Auth::attemptLogin');
 $routes->get('/logout', 'Auth::logout');
 
 $routes->get('/dashboard', 'Home::index', ['filter' => 'auth']);
+$routes->get('/books', 'Home::books', ['filter' => 'auth']);
+$routes->get('/users', 'Home::users', ['filter' => 'auth']);
 
 $routes->group('admin', ['filter' => 'auth:admin'], function($routes) {
     $routes->get('books', 'Admin\Book::index');
@@ -26,3 +28,6 @@ $routes->get('/borrow', 'Borrow::create', ['filter' => 'auth']);
 $routes->post('/borrow/store', 'Borrow::store', ['filter' => 'auth']);
 
 $routes->get('/reports', 'Report::index', ['filter' => 'auth']);
+$routes->get('/reports/edit/(:num)', 'Report::edit/$1', ['filter' => 'auth']);
+$routes->post('/reports/update/(:num)', 'Report::update/$1', ['filter' => 'auth']);
+$routes->get('/reports/delete/(:num)', 'Report::delete/$1', ['filter' => 'auth']);
